@@ -6,3 +6,5 @@ pip install flask
 
 get everything running without Docker first and then containerised application after
 
+Each python file will have a dockerfile (two in total) and a docker-compose.yaml with instructions on how the app works: 1 gateway and 3 storages.
+Application is run calling docker-compose
