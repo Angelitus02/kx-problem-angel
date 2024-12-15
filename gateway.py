@@ -37,6 +37,7 @@ class Gateway(http.server.SimpleHTTPRequestHandler):
                         self.send_response(200)
                         self.end_headers()
                         self.wfile.write(response.content)
+                        print(f"Forwarded data: {response.json()}")
                         print(response.json())
                         return
                 except requests.exceptions.RequestException:
