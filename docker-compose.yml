@@ -1,0 +1,26 @@
+version: '4.17.1'
+services:
+  gateway:
+    build:
+      context: .
+      dockerfile: Dockerfile.gateway
+    ports:
+      - "8000:8000"
+  storage1:
+    build:
+      context: .
+      dockerfile: Dockerfile.storage
+    ports:
+      - "5000:5000"
+  storage2:
+    build:
+      context: .
+      dockerfile: Dockerfile.storage
+    ports:
+      - "5001:5000"
+  storage3:
+    build:
+      context: .
+      dockerfile: Dockerfile.storage
+    ports:
+      - "5002:5000"

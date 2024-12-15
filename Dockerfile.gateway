@@ -1,0 +1,7 @@
+FROM python:3.11.9
+WORKDIR /angel
+COPY gateway.py ./
+COPY requirements.txt ./
+EXPOSE 8000
+RUN pip install -r requirements.txt
+CMD [ "python", "./gateway.py" ]
