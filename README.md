@@ -1,10 +1,7 @@
 # kx-problem-angel
 
 One file called storage.py to store data with getters/setters(or just getters as data can be hardcoded) that is accessed by another class/file: gateway.py
-
-pip install flask
-
-get everything running without Docker first and then containerised application after
+Get everything running without Docker first and then containerised application after
 
 Each python file will have a dockerfile (two in total) and a docker-compose.yaml with instructions on how the app works: 1 gateway and 3 storages.
 Application is run calling docker-compose
@@ -17,9 +14,7 @@ I implemented the storage.py to be able to get data and status.
 I will implement the round robyn randomess later on.
 Round robyn implemented with a very simple index. (Could use iterator python classes as an improvement)
 
-Other improvements to the application would be using docker volumes to store the dummy data.
-
-some problems encountered:
+Some problems encountered:
 
 Docker-compose command doesnt work with docker desktop in windows 
 Fix: docker compose (without the -)
@@ -35,3 +30,5 @@ You can see here we get 3 (200) responses, one for each storage service. Then th
 
 I had a minor bug where I was returning the 503 error regardless.
 Now all responses are 200 but no data is being displayed in the browser or in the console.
+
+Improvements to the application would be using docker volumes to store the dummy data.
